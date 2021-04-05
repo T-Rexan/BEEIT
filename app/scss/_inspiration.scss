@@ -1,0 +1,90 @@
+.inspiration{
+    text-align: center;
+    @media #{$mq-620-up}{
+        text-align: left;
+        }
+    &__container{
+        padding-top:2.8125rem;
+        padding-bottom: 2.8125rem;
+        justify-content: center;
+        display:grid;
+        grid-template-columns:  max-content;
+        grid-template-rows: 1fr 1fr auto;
+        column-gap: 1em;
+        @media #{$mq-620-up}{
+        grid-template-columns:  max-content max-content;
+        grid-template-rows: auto auto;
+        column-gap: 1em;
+        
+        }
+
+        @media #{$mq-620-down}{
+            
+            padding-bottom: 3.1875rem;
+            
+        }
+
+    }
+
+    &__quote{
+
+        font-size: 1.5rem;
+       grid-row: 1;
+
+       text-align: right;
+
+       @media #{$mq-620-up}{
+        grid-column: 1;
+        font-size: 2rem;
+    }
+    }
+
+    &__quote2{
+        font-weight: 700;
+        font-size: 1.5rem;
+        grid-row: 2;
+        width: fit-content;
+        justify-self: center;
+        @media #{$mq-620-up}{
+            grid-row: 1;
+            grid-column: 2;
+            font-size: 2rem;
+        }
+        
+    }
+
+    &__grid-wrapper{
+        width: fit-content;
+        @media #{$mq-620-down}{
+            
+            justify-self: center;
+            
+        }
+    }
+
+    &__underline{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        grid-row: 3;
+        align-self: flex-end;
+        
+         @media #{$mq-620-up}{
+            grid-row: 1;
+            grid-column: 2;
+        }
+        @media #{$mq-620-down}{
+            width: 100%;
+            justify-self: center;
+            
+        }
+
+
+    }
+}
+
+
+
+
+
+

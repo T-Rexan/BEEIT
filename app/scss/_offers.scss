@@ -1,0 +1,306 @@
+.offers {
+  background: $primary;
+  color: $white;
+
+  
+
+  &__title {
+      padding-top: 3rem;
+      line-height: 1.2;
+      font-size: 2rem;
+      text-align: center;
+      @media #{$mq-620-up} {
+        font-size: 1.25rem;
+        text-align: left;
+        padding-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      @media #{$mq-1000-up} {
+        padding-top: 6.125rem;
+        margin-bottom: 1rem;
+      }
+
+      br{
+        
+
+        @media #{$mq-620-up} {
+          display: none;
+        }
+      }
+  }
+
+  &__grid-parent {
+    //display: grid;
+    //grid-template-columns: 1fr;
+    //grid-template-rows: auto auto auto auto auto auto auto auto;
+    column-gap: 1.25rem;
+    row-gap: 0;
+    padding-bottom: 2rem;
+
+    
+    @media #{$mq-620-up} {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      padding-bottom: 4rem;
+    }
+
+    @media #{$mq-1000-up} {
+      display: grid;
+      padding: 2.375rem 0 4rem 0;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+     
+    }
+  }
+
+  &__item {
+    color: $dkBlue;
+    background: $white;
+    
+    @media #{$mq-1000-up} {
+      grid-row: 1;
+     
+     
+    }
+    @media #{$mq-620-up} {
+      
+     
+        margin-top: 0!important;
+      
+      
+    }
+    @media #{$mq-620-down} {
+      &:not(:first-child){
+        margin-top: 2em;
+      }
+      &:first-child{
+        margin-top: 3em;
+      }
+    
+  }
+  }
+  &__item-bottom {
+    color: $dkBlue;
+    background: $white;
+
+    @media #{$mq-1000-up} {
+      grid-row: 2;
+ 
+    }
+    p{
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
+    }
+
+    
+  }
+
+ 
+
+
+  &__image {
+    background: url("../images/london.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 70.64%; 
+
+    &:hover {
+      background-size: contain;
+    background-repeat: no-repeat;
+      transition: all 200ms ease-in-out;
+    }
+
+    
+  }
+
+  &__city {
+      padding-top: 1.25rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+  }
+  &__price{
+    font-size: 1.25rem;
+    padding-bottom: 1.375rem;
+  }
+
+  &__book-now {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $primary;
+    margin-bottom: 1.75rem;
+    &:hover{
+      color:$accent;
+     
+      i{
+        border-color: $accent;
+      }
+    }
+
+    i{
+      padding: 5px;
+    }
+  }
+}
+#img-london{
+
+
+
+  @media #{$mq-1000-down} {
+  grid-row: 1;
+  grid-column: 1;
+}
+@media #{$mq-620-down} {
+  grid-row: 1;
+
+}
+}
+
+#txt-london{
+  @media #{$mq-1000-down} {
+  grid-row: 2;
+  grid-column: 1;
+  margin-bottom: 2rem;
+}
+
+
+}
+
+#img-milano{
+
+  background: url("../images/milano1.png");
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 70.64%; 
+   
+  &:hover{
+    background: url("../images/milano2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+      transition: all 200ms ease-in-out;
+  }
+}
+
+#img-hamburg{
+
+  background: url("../images/hamburg1.png");
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 70.64%; 
+    @media #{$mq-1000-down} {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    
+
+
+  &:hover{
+    background: url("../images/hamburg2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+      transition: all 200ms ease-in-out;
+  }
+}
+
+#txt-hamburg{
+  @media #{$mq-1000-down} {
+  grid-row: 2;
+  grid-column: 2;
+  margin-bottom: 2rem;
+  }
+  
+}
+
+
+
+#img-alicante{
+
+  background: url("../images/alicante.png");
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 70.64%; 
+    @media #{$mq-1000-down} {
+       grid-row: 3;
+      grid-column: 1;
+    }
+
+    @media #{$mq-620-down} {
+      grid-row: 3;
+     grid-column: 1;
+   }
+     
+    
+  &:hover{
+    background: url("../images/london.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+      transition: all 200ms ease-in-out;
+  }
+
+
+}
+
+
+#txt-alicante{
+  @media #{$mq-1000-down} {
+  grid-row: 4;
+  grid-column: 1;
+}}
+
+
+.ribbon{
+  height: 30px;
+  width: 85%;
+  position: absolute;
+  top:22px;
+  left: -10px;
+  background:#ffed28;
+  display: flex;
+
+ span{
+   padding-left: 1rem;
+  align-items: center;
+   color: $primary;
+   font-size:0.875rem;
+   font-weight: 700;
+   align-self: center;
+
+   @media #{$mq-620-down} {
+    font-size:1rem;
+  }
+ }
+
+  @media #{$mq-620-down} {
+    
+    height: 40px;
+    
+  }
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top:52px;
+    left: -10px;
+    border-top: 10px solid #b3a61d;
+    border-left: 10px solid transparent;
+
+    @media #{$mq-620-down} {
+
+      top:62px;
+      
+    }
+}

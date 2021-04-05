@@ -1,0 +1,110 @@
+.footer{
+
+    border-bottom: 10px $accent solid;
+
+    &__container{
+        @media #{$mq-1000-down} {
+            width: 50%;
+        }
+    
+        @media #{$mq-620-down} {
+            width: 100%;
+        }
+    
+        @media #{$mq-1000-up} {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 3.125rem;
+            padding-bottom: 3.125rem;
+            
+        }
+    }
+
+    &__flex-parent{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        
+    }
+
+    &__credit-card{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+
+        @media #{$mq-620-up} {
+               
+           margin-top: 1rem;
+            
+        }
+        @media #{$mq-1000-up} {
+               
+            margin-top: 0;
+             
+         }
+
+
+        svg path{
+            fill:$ltGray2;
+        }
+
+        svg{
+           
+            &:not(:last-of-type){
+                padding-right: 0.5rem;
+            }
+
+            @media #{$mq-1000-up} {
+               
+                height: 3vw;
+                &:not(:last-of-type){
+                    padding-right: 1.5rem;
+                }
+                
+            }
+
+            
+            @media #{$mq-1000-down} {
+               
+                width: 100%;
+                height: 50%;
+                
+            }
+        }
+
+    }
+
+    &__other-options{
+        display: flex;
+        flex-direction: row;
+        color: $gray;
+        @media #{$mq-1000-down} {
+            justify-content: center;
+            margin-top: 1REM;
+            margin-bottom: 2REM;
+            
+        }
+
+
+        @media #{$mq-1000-up} {
+               
+            font-size: 1rem;
+            
+        }
+
+    }
+
+    &__other-link{
+        &:first-of-type{
+            margin-right: 1REM;
+        }
+
+        &:hover{
+            color: $gray;
+        }
+    }
+}

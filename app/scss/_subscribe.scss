@@ -1,0 +1,139 @@
+.subscribe {
+  background: $primary;
+  color: $white;
+  h3 {
+    font-weight: 400;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3.75rem;
+    padding-bottom: 3rem;
+
+    @media #{$mq-1000-up} {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__flex-item{
+      width: 100%; 
+      display: flex;
+      flex-direction: column;
+    align-items: center;
+    @media #{$mq-1000-up} {
+       
+        align-items: center;
+        flex-direction: row;
+        flex: 3;
+        justify-content: space-between;
+      }
+  }
+
+  &__title {
+    text-align: center;
+
+
+    @media #{$mq-1000-up} {
+      text-align: left;
+    }
+
+    @media #{$mq-1000-down} {
+      margin-bottom: 2.625rem;
+    }
+  }
+
+  &__form {
+    width: 65%;
+    @media #{$mq-1000-down} {
+      margin-bottom: 2.625rem;
+      width: 70%;
+    }
+    @media #{$mq-620-down} {
+      margin-bottom: 2.625rem;
+      width: 100%;
+    }
+  }
+
+  &__send-link{
+    &:hover{
+      color:$accent;
+      transition: color 200ms ease-in-out;
+      i{
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__send-button {
+    font-size: 1rem;
+    color: $primary;
+    background: $white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    
+    @media #{$mq-620-up} {
+        width: 40%;
+      }
+  }
+
+  &__social {
+      display: flex;
+      flex-direction: row;
+      flex: 2;
+      align-items: center;
+      justify-content: end;
+      padding-left: 4em;
+  }
+
+  &__follow-us {
+      
+      text-align: center;
+     
+      @media #{$mq-1000-up} {
+        text-align: left;
+        margin-right: 2rem;
+        //padding-left: 1rem;
+      }
+
+      @media #{$mq-1000-down} {
+        margin-top: 2rem; 
+        font-size: 2rem;
+
+        margin-bottom: 1.5rem;
+      }
+  
+  }
+
+  &__flex-parent{
+      display: flex;
+      flex-direction: row;
+  }
+
+  &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:not(:last-child){
+          margin-right: 0.625rem;
+      }
+
+      &:hover svg path{
+        fill:$accent;
+      }
+
+      &:hover{
+          border-color:$accent;
+      }
+
+      svg{
+        fill: $white   ;
+        align-self: center;
+        justify-content: stretch;
+      }
+  }
+}

@@ -1,0 +1,101 @@
+.info-text{
+    width: 100%;
+    padding-bottom: 2.625rem;
+    padding-top: 2.625rem;
+    font-size: 1.25rem;
+    
+
+   
+
+    &__subtitle{
+        color: #757575;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        @media #{$mq-620-down} {
+            font-size: .9375rem;
+           
+        }
+    }
+
+    &__title{
+        margin-top: 0;
+        margin-bottom: 4.5rem;
+    }
+
+    &__grid-parent{
+
+        margin-top: 1rem;
+
+        @media #{$mq-620-up} {
+            display: grid;
+            gap: 3rem 1rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+           
+        }
+       
+
+    }
+
+    &__grid-item{
+
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          "icon title"
+          "icon description";
+        gap: 1rem ;
+        justify-items: start;
+
+        @media #{$mq-620-down} {
+            margin-top: 2rem;
+           
+        }
+        
+
+    }
+
+
+    &__content-title{
+
+        grid-area: title;
+        font-size: 1.25rem;
+        color: $dkBlue;
+        @media #{$mq-620-up} {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__description{
+        grid-area: description;
+        color: $dkBlue;
+    }
+
+    &__icon{
+        grid-area: icon;
+        align-self: center;
+       justify-self: center;
+      
+    }
+
+
+}
+
+#seat{
+    padding:  1.625rem 1.8125rem 1.625rem 1.4375rem;
+}
+
+#cabin{
+    padding: 1.5625rem 2.125rem ;
+}
+
+#smile{
+    padding: 2rem 1.6875rem ;
+}
+
+#shoe{
+    padding:  2rem 1.1875rem 2rem 1.625rem;
+}
