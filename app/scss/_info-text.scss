@@ -1,10 +1,15 @@
 .info-text{
     width: 100%;
-    padding-bottom: 2.625rem;
-    padding-top: 2.625rem;
-    font-size: 1.25rem;
+    padding-top: .625rem;
+    padding-bottom: 4.375rem;
+    font-size: 1.125rem;
     
 
+    @media #{$mq-1000-up} {
+    padding-top: 2.625rem;
+    padding-bottom: 4.375rem;
+       
+    }
    
 
     &__subtitle{
@@ -12,16 +17,29 @@
         font-weight: 400;
         margin-bottom: 1rem;
         text-align: center;
+        font-size: 0.875rem;
+        margin-top: 1.25rem;
 
         @media #{$mq-620-down} {
             font-size: .9375rem;
            
         }
+
+        @media #{$mq-1000-up} {
+            font-size: 1rem;
+               
+            }
     }
 
     &__title{
         margin-top: 0;
-        margin-bottom: 4.5rem;
+        margin-bottom: 2.5rem;
+
+        @media #{$mq-1000-up} {
+            
+            margin-bottom: 4.5rem;
+           
+        }
     }
 
     &__grid-parent{
@@ -30,13 +48,15 @@
 
         @media #{$mq-620-up} {
             display: grid;
-            gap: 3rem 1rem;
+            gap: 5rem 1rem;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
            
         }
-       
 
+        @media #{$mq-1000-up} {
+            gap: 3rem 7.5rem;
+        }
     }
 
     &__grid-item{
@@ -47,7 +67,7 @@
         grid-template-areas:
           "icon title"
           "icon description";
-        gap: 1rem ;
+        gap: 0.625rem 1.875rem;
         justify-items: start;
 
         @media #{$mq-620-down} {
@@ -64,24 +84,29 @@
         grid-area: title;
         font-size: 1.25rem;
         color: $dkBlue;
-        @media #{$mq-620-up} {
+        
+        @media #{$mq-1000-up} {
             font-size: 1.5rem;
+           
         }
     }
 
     &__description{
         grid-area: description;
         color: $dkBlue;
+        line-height: 1.1;
+        font-size: 1rem;
+
+        @media #{$mq-1000-up} {
+            font-size: 1.125rem;
+        }
     }
 
     &__icon{
         grid-area: icon;
-        align-self: center;
-       justify-self: center;
-      
+        align-self: start;
+       justify-self: start;
     }
-
-
 }
 
 #seat{
@@ -89,7 +114,7 @@
 }
 
 #cabin{
-    padding: 1.5625rem 2.125rem ;
+    padding: 1.4375rem 2rem ;
 }
 
 #smile{

@@ -46,9 +46,63 @@ function tab(element) {
   active.classList.remove("active");
   //console.log(active)
   element.classList.add("active");
+  var now_active=document.querySelector('.active');
+  var type=now_active.textContent;
+
+
+  if (type=='Plus'){
+    var premium_elems=document.querySelectorAll('.premium');
+    premium_elems.forEach(function(element){
+      element.classList.remove('option-primary');
+    });
+    var plus_elems=document.querySelectorAll('.plus');
+    plus_elems.forEach(function(element){
+      element.classList.add('option-primary');
+    });
+    var img_premium=document.querySelectorAll('.img-premium');
+    img_premium.forEach(function(element){
+      element.src='./images/x.png';
+      element.classList.remove('img-padding');
+    });
+
+    var img_plus=document.querySelectorAll('.img-plus');
+    img_plus.forEach(function(element){
+      element.src='./images/v.png';
+      element.classList.add('img-padding');
+    });
+  }
+
+  if (type=='Premium'){
+    
+    var premium_elems=document.querySelectorAll('.premium');
+    premium_elems.forEach(function(element){
+      element.classList.add('option-primary');
+    });
+
+    var img_premium=document.querySelectorAll('.img-premium');
+    img_premium.forEach(function(element){
+      element.src='./images/v.png';
+      element.classList.add('img-padding');
+    });
+  }
+
+  if (type=='Regular'){
+    var regular_elems=document.querySelectorAll('.premium');
+    regular_elems.forEach(function(element){
+      element.classList.remove('option-primary');
+    });
+
+    var img_premium=document.querySelectorAll('.img-premium');
+    img_premium.forEach(function(element){
+      element.src='./images/x.png';
+      element.classList.remove('img-padding');
+    });
+  }
+
+
 }
 
-var triggerElementID = null; // this variable is used to identity the triggering element
+var triggerElementID = "null"; // this variable is used to identity the triggering element
 var fingerCount = 0;
 var startX = 0;
 var startY = 0;
@@ -69,7 +123,8 @@ var swipeDirection = null;
 // make sure its ID is passed in the event call placed in the element declaration, like:
 // <div id="picture-frame" ontouchstart="touchStart(event,'picture-frame');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
 
-function touchStart(event, passedName) {
+function touchStart(event) {
+  console.log('start');
   // disable the standard ability to select the touched object
   event.preventDefault();
   // get the total number of fingers touching the screen
@@ -81,7 +136,7 @@ function touchStart(event, passedName) {
     startX = event.touches[0].pageX;
     startY = event.touches[0].pageY;
     // store the triggering element ID
-    triggerElementID = passedName;
+    triggerElementID = "background";
   } else {
     // more than one finger touched so cancel
     touchCancel(event);
@@ -89,6 +144,7 @@ function touchStart(event, passedName) {
 }
 
 function touchMove(event) {
+  console.log('move');
   event.preventDefault();
   if (event.touches.length == 1) {
     curX = event.touches[0].pageX;
@@ -99,6 +155,7 @@ function touchMove(event) {
 }
 
 function touchEnd(event) {
+  console.log('end');
   event.preventDefault();
   // check to see if more than one finger was used and that there is an ending coordinate
   if (fingerCount == 1 && curX != 0) {
@@ -121,6 +178,7 @@ function touchEnd(event) {
 }
 
 function touchCancel(event) {
+  console.log('cancel');
   // reset the variables back to default values
   fingerCount = 0;
   startX = 0;
@@ -170,3 +228,15 @@ function processingRoutine() {
    next();
   } 
 }
+
+function startup(){
+var hero_bg=document.getElementById('background');
+hero_bg.addEventListener('touchstart',touchStart,false);
+hero_bg.addEventListener('touchend',touchEnd,false);
+hero_bg.addEventListener('touchmove',touchMove,false);
+hero_bg.addEventListener('touchcancel',touchCancel,false);
+
+}
+
+
+document.addEventListener("DOMContentLoaded", startup);

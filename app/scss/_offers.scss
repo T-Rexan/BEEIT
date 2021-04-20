@@ -2,43 +2,35 @@
   background: $primary;
   color: $white;
 
-  
-
   &__title {
+    padding-top: 3rem;
+    line-height: 1.2;
+    font-size: 2rem;
+    text-align: center;
+    @media #{$mq-620-up} {
+      font-size: 1.25rem;
+      text-align: left;
       padding-top: 3rem;
-      line-height: 1.2;
-      font-size: 2rem;
-      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    @media #{$mq-1000-up} {
+      padding-top: 3.125rem;
+      margin-bottom: 1rem;
+    }
+
+    br {
       @media #{$mq-620-up} {
-        font-size: 1.25rem;
-        text-align: left;
-        padding-top: 3rem;
-        margin-bottom: 3rem;
+        display: none;
       }
-
-      @media #{$mq-1000-up} {
-        padding-top: 6.125rem;
-        margin-bottom: 1rem;
-      }
-
-      br{
-        
-
-        @media #{$mq-620-up} {
-          display: none;
-        }
-      }
+    }
   }
 
   &__grid-parent {
-    //display: grid;
-    //grid-template-columns: 1fr;
-    //grid-template-rows: auto auto auto auto auto auto auto auto;
     column-gap: 1.25rem;
-    row-gap: 0;
+    row-gap: 1.25rem;
     padding-bottom: 2rem;
 
-    
     @media #{$mq-620-up} {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -48,84 +40,70 @@
 
     @media #{$mq-1000-up} {
       display: grid;
-      padding: 2.375rem 0 4rem 0;
+      padding: 1.25rem 0 4rem 0;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto auto;
-     
+      grid-template-rows: auto;
     }
   }
 
   &__item {
     color: $dkBlue;
     background: $white;
-    
+
     @media #{$mq-1000-up} {
       grid-row: 1;
-     
-     
     }
     @media #{$mq-620-up} {
-      
-     
-        margin-top: 0!important;
-      
-      
+      margin-top: 0 !important;
     }
     @media #{$mq-620-down} {
-      &:not(:first-child){
+      &:not(:first-child) {
         margin-top: 2em;
       }
-      &:first-child{
+      &:first-child {
         margin-top: 3em;
       }
-    
-  }
+    }
   }
   &__item-bottom {
     color: $dkBlue;
     background: $white;
-
-    @media #{$mq-1000-up} {
-      grid-row: 2;
- 
+    padding-bottom: 1.25rem;
+    p,
+    a {
+      padding-left: 1.875rem;
     }
-    p{
-        padding-left: 1.875rem;
-        padding-right: 1.875rem;
-    }
-
-    
   }
 
- 
-
-
   &__image {
-    background: url("../images/london.png");
-    background-size: contain;
-    background-repeat: no-repeat;
     position: relative;
+    display: inline-block;
     width: 100%;
-    height: 0;
-    padding-top: 70.64%; 
-
-    &:hover {
-      background-size: contain;
-    background-repeat: no-repeat;
-      transition: all 200ms ease-in-out;
+    img {
+      width: 100%;
     }
 
-    
+    .img-top {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    &:hover .img-top {
+      display: inline;
+    }
   }
 
   &__city {
-      padding-top: 1.25rem;
-      font-weight: 700;
-      font-size: 1.5rem;
+    padding-top: 0.9375rem;
+    font-weight: 700;
+    font-size: 1.5rem;
   }
-  &__price{
+  &__price {
     font-size: 1.25rem;
-    padding-bottom: 1.375rem;
+    padding-bottom: 1.25rem;
   }
 
   &__book-now {
@@ -133,174 +111,56 @@
     font-weight: 700;
     font-size: 1.5rem;
     color: $primary;
-    margin-bottom: 1.75rem;
-    &:hover{
-      color:$accent;
-     
-      i{
+    padding-bottom: 1.75rem;
+    &:hover {
+      color: $accent;
+      i {
         border-color: $accent;
       }
     }
-
-    i{
+    i {
       padding: 5px;
     }
   }
 }
-#img-london{
 
-
-
-  @media #{$mq-1000-down} {
-  grid-row: 1;
-  grid-column: 1;
-}
-@media #{$mq-620-down} {
-  grid-row: 1;
-
-}
-}
-
-#txt-london{
-  @media #{$mq-1000-down} {
-  grid-row: 2;
-  grid-column: 1;
-  margin-bottom: 2rem;
-}
-
-
-}
-
-#img-milano{
-
-  background: url("../images/milano1.png");
-  background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 70.64%; 
-   
-  &:hover{
-    background: url("../images/milano2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-      transition: all 200ms ease-in-out;
-  }
-}
-
-#img-hamburg{
-
-  background: url("../images/hamburg1.png");
-  background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 70.64%; 
-    @media #{$mq-1000-down} {
-      grid-row: 2;
-      grid-column: 1;
-    }
-
-    
-
-
-  &:hover{
-    background: url("../images/hamburg2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-      transition: all 200ms ease-in-out;
-  }
-}
-
-#txt-hamburg{
-  @media #{$mq-1000-down} {
-  grid-row: 2;
-  grid-column: 2;
-  margin-bottom: 2rem;
-  }
-  
-}
-
-
-
-#img-alicante{
-
-  background: url("../images/alicante.png");
-  background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 70.64%; 
-    @media #{$mq-1000-down} {
-       grid-row: 3;
-      grid-column: 1;
-    }
-
-    @media #{$mq-620-down} {
-      grid-row: 3;
-     grid-column: 1;
-   }
-     
-    
-  &:hover{
-    background: url("../images/london.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-      transition: all 200ms ease-in-out;
-  }
-
-
-}
-
-
-#txt-alicante{
-  @media #{$mq-1000-down} {
-  grid-row: 4;
-  grid-column: 1;
-}}
-
-
-.ribbon{
+.ribbon {
   height: 30px;
   width: 85%;
   position: absolute;
-  top:22px;
+  top: 15px;
   left: -10px;
-  background:#ffed28;
+  background: #ffed28;
   display: flex;
 
- span{
-   padding-left: 1rem;
-  align-items: center;
-   color: $primary;
-   font-size:0.875rem;
-   font-weight: 700;
-   align-self: center;
+  span {
+    padding-left: 0.875rem;
+    align-items: center;
+    color: $primary;
+    font-size: 1.125rem;
+    font-weight: 900;
+    align-self: center;
 
-   @media #{$mq-620-down} {
-    font-size:1rem;
+    @media #{$mq-620-down} {
+      font-size: 1rem;
+    }
   }
- }
 
   @media #{$mq-620-down} {
-    
     height: 40px;
-    
   }
 }
 
-.triangle{
-    width: 0;
-    height: 0;
-    position: absolute;
-    top:52px;
-    left: -10px;
-    border-top: 10px solid #b3a61d;
-    border-left: 10px solid transparent;
+.triangle {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 45px;
+  left: -10px;
+  border-top: 10px solid #b3a61d;
+  border-left: 10px solid transparent;
 
-    @media #{$mq-620-down} {
-
-      top:62px;
-      
-    }
+  @media #{$mq-620-down} {
+    top: 62px;
+  }
 }

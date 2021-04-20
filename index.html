@@ -23,7 +23,7 @@
     />
 
     <!-- CSS File -->
-    <link rel="stylesheet" href="dist/style.css?cb=1617647904847" />
+    <link rel="stylesheet" href="dist/style.css?cb=1618942879153" />
   </head>
   <body>
     <header>
@@ -32,40 +32,41 @@
           <img src="./images/logo.png" alt="" />
         </a>
         <div class="nav__items">
-          <nav class="nav__navbar">
-            <a href="#info" class="nav__link">Info</a>
-            <a href="" class="nav__link">About us</a>
-            <a href="#contact" class="nav__link">Contact</a>
+          <nav >
+            <ul class="nav__navbar">
+            <li><a href="#info" class="nav__link">Info</a></li>
+            <li><a href="" class="nav__link">About us</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
           </nav>
           <div class="nav__other-info">
             <a href="" class="upper nav__login">LOGIN</a>
-            <a href="#"> <img src="./images/flag.png" alt="" class="flag" /></a>
-            <a href="" class="upper hide-for-mobile">EN-UK</a>
-            <a href="">(&pound;)</a>
+            <a href="#" class="nav__language"> <img src="./images/flag.png" alt="" class="flag" /><span class="upper hide-for-mobile">EN-UK</span> (&pound;)</a>
+            
           </div>
         </div>
       </div>
     </header>
 
     <section class="hero">
-      <div class="hero__background" id="background" ontouchstart="touchStart(event,'swipeBox');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+      <div class="hero__background" id="background" >
         <div class="hero__container container">
           <div class="hero__text">
-            <h1 class="hero__title">Enjoy our hot summer deals</h1>
+            <h2 class="hero__title">Enjoy our hot <br class="hide-for-tablet-mobile"/>summer deals</h2>
             <p class="hero__price">from &pound;69 <sup>.50</sup></p>
             <button class="hero__button">Book now!</button>
           </div>
           <div class="hero__arrows">
-            <a onclick="prev()">
+            <button onclick="prev()">
               <div class="info-text__icon bg-eclipse bg-eclipse--arrows">
                 <img src="./images/arrow.png" class="rotate" alt="" />
               </div>
-            </a>
-            <a onclick="next()">
+            </button>
+            <button onclick="next()">
               <div class="info-text__icon bg-eclipse bg-eclipse--arrows">
                 <img src="./images/arrow.png" alt="" />
               </div>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -74,7 +75,7 @@
     <section class="info-text" id="info">
       <div class="container--small">
         <p class="info-text__subtitle upper">Low cost doesnt mean cheap</p>
-        <h1 class="info-text__title">Fly smart,fly with Green Earth</h1>
+        <h1 class="info-text__title">Fly smart, fly with Green Earth</h1>
         <div class="info-text__grid-parent">
           <div class="info-text__grid-item">
             <div class="info-text__icon bg-eclipse">
@@ -131,53 +132,66 @@
         </p>
         <div class="offers__grid-parent">
           <div class="offers__item">
-            <div class="offers__image" id="img-london">
+            <div class="offers__image">
               <div class="ribbon">
                 <span>3h left at this rate</span>
               </div>
+              <img src="./images/london.png" alt="">
               <div class="triangle"></div>
             </div>
-          </div>
-          <div class="offers__item-bottom" id="txt-london">
+
+            <div class="offers__item-bottom" >
             <p class="offers__city">London</p>
             <p class="offers__price">from &pound; 59</p>
-            <p  class="offers__book-now">
-              <a>Book now<i class="arrow right arrow--blue"></i></a>
-            </p>
+            
+            <a class="offers__book-now">Book now<i class="arrow right arrow--blue"></i></a>
+          </div> 
           </div>
+         
           <div class="offers__item">
-            <div class="offers__image" id="img-hamburg"></div>
-          </div>
-          <div class="offers__item-bottom" id="txt-hamburg">
+            <div class="offers__image" >
+              <img src="./images/hamburg1.png" alt="">
+              <img src="./images/hamburg2.png" class="img-top" alt="">
+            </div>
+            
+            <div class="offers__item-bottom">
             <p class="offers__city">Hamburg</p>
             <p class="offers__price">from &pound; 79</p>
-            <p class="offers__book-now">
-              <a>Book now<i class="arrow right arrow--blue"></i></a>
-            </p>
+            <a class="offers__book-now">Book now<i class="arrow right arrow--blue"></i></a>
+           
           </div>
+
+          </div>
+          
+          <div class="offers__item">
+            <div class="offers__image" >
+              <img src="./images/alicante.png" alt="">
+              <img src="./images/london.png" class="img-top" alt="">
+            </div>
+
+            <div class="offers__item-bottom" >
+              <p class="offers__city">Alicante</p>
+              <p class="offers__price">from &pound; 89</p>
+              <a class="offers__book-now">Book now<i class="arrow right arrow--blue"></i></a>
+             
+            </div>
+          </div>
+
+         
 
           <div class="offers__item">
-            <div class="offers__image" id="img-alicante"></div>
-          </div>
+            <div class="offers__image" >
+              <img src="./images/milano1.png" alt="">
+              <img src="./images/milano2.png" class="img-top" alt="">
+            </div>
 
-          <div class="offers__item-bottom" id="txt-alicante">
-            <p class="offers__city">Alicante</p>
-            <p class="offers__price">from &pound; 89</p>
-            <p  class="offers__book-now">
-              <a>Book now<i class="arrow right arrow--blue"></i></a>
-            </p>
+            <div class="offers__item-bottom" >
+              <p class="offers__city">Milano</p>
+              <p class="offers__price">from &pound; 119</p>
+              <a class="offers__book-now">Book now<i class="arrow right arrow--blue"></i></a>
+            </div>
           </div>
-
-          <div class="offers__item">
-            <div class="offers__image" id="img-milano"></div>
-          </div>
-          <div class="offers__item-bottom" id="txt-milano">
-            <p class="offers__city">Milano</p>
-            <p class="offers__price">from &pound; 119</p>
-            <p  class="offers__book-now">
-              <a>Book now<i class="arrow right arrow--blue"></i></a>
-            </p>
-          </div>
+         
         </div>
       </div>
     </section>
@@ -202,10 +216,10 @@
     </section>
 
     <section class="classes">
-      <div class="classes__container container">
+      <div class="classes__container container--small">
         <div class="classes__text">
           <p class="classes__subtitle upper">quality from the inside</p>
-          <h1 class="classes__title">Travel the way you want</h1>
+          <h2 class="classes__title">Travel the way you want</h2>
           <p class="classes__description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt
@@ -219,13 +233,9 @@
         <a href="" class="classes__read-more">View all services and upgrades</a>
         <div class="classes__tabs">
           <div class="classes__tab-top hide-for-mobile">
-            <div class="classes__tab-top-option active" onclick="tab(this)">
-              Regular
-            </div>
+            <div class="classes__tab-top-option active" onclick="tab(this)">Regular</div>
             <div class="classes__tab-top-option" onclick="tab(this)">Plus</div>
-            <div class="classes__tab-top-option" onclick="tab(this)">
-              Premium
-            </div>
+            <div class="classes__tab-top-option" onclick="tab(this)">Premium</div>
           </div>
           <div class="classes__tab">
             <img
@@ -251,16 +261,16 @@
               </div>
               <div class="classes__disabled">
                 <div class="classes__option">
-                  <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.76 144.99"><title>icon</title><path d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z" transform="translate(-150.9 -284.07)"/><path d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z" transform="translate(-150.9 -284.07)"/></svg>
-                  <p>Extra cabin luggage</p>
+                  <img class="img-plus img-premium" src="./images/x.png" alt="" />                  
+                  <p class="plus premium">Extra cabin luggage</p>
                 </div>
                 <div class="classes__option">
-                  <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.76 144.99"><title>icon</title><path d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z" transform="translate(-150.9 -284.07)"/><path d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z" transform="translate(-150.9 -284.07)"/></svg>
-                  <p>Extra hold luggage</p>
+                  <img class="img-plus img-premium" src="./images/x.png" alt="" />                  
+                  <p class="plus premium">Extra hold luggage</p>
                 </div>
                 <div class="classes__option">
-                  <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.76 144.99"><title>icon</title><path d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z" transform="translate(-150.9 -284.07)"/><path d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z" transform="translate(-150.9 -284.07)"/></svg>
-                  <p>Lounge access</p>
+                  <img class="img-premium" src="./images/x.png" alt="" />
+                  <p class="premium">Lounge access</p>
                 </div>
               </div>
             </div>
@@ -289,12 +299,12 @@
                 </div>
               </div>
               <div class="classes__disabled">
-                <div class="classes__option">
-                  <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.76 144.99"><title>icon</title><path d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z" transform="translate(-150.9 -284.07)"/><path d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z" transform="translate(-150.9 -284.07)"/></svg>
+                <div class="classes__option option-primary">
+                  <img src="./images/v.png" alt="" />
                   <p>Extra cabin luggage</p>
                 </div>
-                <div class="classes__option">
-                  <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.76 144.99"><title>icon</title><path d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z" transform="translate(-150.9 -284.07)"/><path d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z" transform="translate(-150.9 -284.07)"/></svg>
+                <div class="classes__option option-primary">
+                  <img src="./images/v.png" alt="" />
                   <p>Extra hold luggage</p>
                 </div>
                 <div class="classes__option">
@@ -327,31 +337,16 @@
                 <p>Extra leg room</p>
               </div>
               <div class="classes__disabled">
-              <div class="classes__option">
-                <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.76 144.99"><title>icon</title><path d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z" transform="translate(-150.9 -284.07)"/><path d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z" transform="translate(-150.9 -284.07)"/></svg>
+              <div class="classes__option option-primary">
+                <img src="./images/v.png" alt="" />
                 <p>Extra cabin luggage</p>
               </div>
-              <div class="classes__option">
-                <svg  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.76 144.99"><title>icon</title><path d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z" transform="translate(-150.9 -284.07)"/><path d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z" transform="translate(-150.9 -284.07)"/></svg>
+              <div class="classes__option option-primary">
+                <img src="./images/v.png" alt="" />
                 <p>Extra hold luggage</p>
               </div>
-              <div class="classes__option">
-                <svg
-                  
-                  data-name="Layer 1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 141.76 144.99"
-                >
-                  <title>icon</title>
-                  <path
-                    d="M209.2,392.19c-2.21.1-4.52.16-6.94.16-24,0-37.31-5.55-39.28-8.1V371.19c11.14,4.72,27.66,6.26,39.28,6.26,2.84,0,6-.09,9.24-.3A45.81,45.81,0,0,1,218,364.5a134.5,134.5,0,0,1-15.74.88c-24,0-37.32-5.56-39.28-8.1V344.21c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26v3.42a45.9,45.9,0,0,1,12.08-2V303.79c0-15.56-32.28-19.72-51.36-19.72s-51.36,4.15-51.36,19.72v80.92c0,15.56,32.28,19.72,51.36,19.72,2.68,0,5.62-.08,8.69-.27A46,46,0,0,1,209.2,392.19Zm-6.94-96c22.68,0,35.78,4.95,38.84,7.64-3.06,2.7-16.15,7.64-38.84,7.64s-35.78-4.95-38.84-7.64C166.48,301.09,179.58,296.14,202.26,296.14ZM163,317.24c11.14,4.72,27.66,6.26,39.28,6.26s28.14-1.54,39.28-6.26V330.3c-2,2.54-15.24,8.1-39.28,8.1s-37.32-5.56-39.28-8.1Z"
-                    transform="translate(-150.9 -284.07)"
-                  />
-                  <path
-                    d="M255.17,354.06a37.5,37.5,0,1,0,37.5,37.5A37.5,37.5,0,0,0,255.17,354.06ZM258,411.24v2.69a2.92,2.92,0,0,1-5.84,0v-2.72a12.21,12.21,0,0,1-8.33-7.21,2.92,2.92,0,1,1,5.32-2.42l.07.16a6.39,6.39,0,0,0,5.91,3.93c3.08,0,6.4-1.76,6.4-5.62,0-1,0-4.09-7-5.7h-.11C244.45,392,243,386.24,243,383a11.33,11.33,0,0,1,9.35-11.15v-2.65a2.92,2.92,0,1,1,5.84,0v2.72a12.21,12.21,0,0,1,8.38,7.15,2.92,2.92,0,0,1-5.39,2.27,6.39,6.39,0,0,0-5.91-3.93c-3.08,0-6.4,1.76-6.4,5.62,0,1,0,4.09,7,5.7h.11c9.94,2.34,11.44,8.13,11.44,11.38A11.33,11.33,0,0,1,258,411.24Z"
-                    transform="translate(-150.9 -284.07)"
-                  />
-                </svg>
+              <div class="classes__option option-primary">
+                <img src="./images/v.png" alt="" />
                 <p>Lounge access</p>
               </div></div>
             </div>
@@ -371,9 +366,9 @@
               placeholder="Enter your email address"
               class="subscribe__input"
             />
-            <a href="#" class="subscribe__send-link hide-for-tablet-mobile"
+            <button class="subscribe__send-link hide-for-tablet-mobile"
               >Send <i class="arrow right"></i
-            ></a>
+            ></button>
           </form>
         </div>
         <button class="subscribe__send-button hide-for-desktop">Send</button>
@@ -534,6 +529,6 @@
     </footer>
 
     <!-- JavaScript File -->
-    <script src="dist/all.js?cb=1617647904847"></script>
+    <script src="dist/all.js?cb=1618942879153"></script>
   </body>
 </html>

@@ -16,8 +16,8 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding-top: 3.125rem;
-            padding-bottom: 3.125rem;
+            padding-top: 1.125rem;
+            padding-bottom: 1.125rem;
             
         }
     }
@@ -62,7 +62,7 @@
                
                 height: 3vw;
                 &:not(:last-of-type){
-                    padding-right: 1.5rem;
+                    padding-right: 1.25rem;
                 }
                 
             }
@@ -84,16 +84,12 @@
         color: $gray;
         @media #{$mq-1000-down} {
             justify-content: center;
-            margin-top: 1REM;
-            margin-bottom: 2REM;
-            
+            margin-top: 1rem;
+            margin-bottom: 2rem;
         }
 
-
         @media #{$mq-1000-up} {
-               
             font-size: 1rem;
-            
         }
 
     }

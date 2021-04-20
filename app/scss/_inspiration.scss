@@ -4,8 +4,8 @@
         text-align: left;
         }
     &__container{
-        padding-top:2.8125rem;
-        padding-bottom: 2.8125rem;
+        padding-top:2.5rem;
+        padding-bottom: 2.5rem;
         justify-content: center;
         display:grid;
         grid-template-columns:  max-content;
@@ -15,9 +15,7 @@
         grid-template-columns:  max-content max-content;
         grid-template-rows: auto auto;
         column-gap: 1em;
-        
         }
-
         @media #{$mq-620-down}{
             
             padding-bottom: 3.1875rem;
@@ -35,8 +33,12 @@
 
        @media #{$mq-620-up}{
         grid-column: 1;
+        font-size: 1.5rem;
+    }
+    @media #{$mq-1000-up}{
         font-size: 2rem;
     }
+
     }
 
     &__quote2{
@@ -48,17 +50,18 @@
         @media #{$mq-620-up}{
             grid-row: 1;
             grid-column: 2;
+            font-size: 1.5rem;
+        }
+
+        @media #{$mq-1000-up}{
             font-size: 2rem;
         }
-        
     }
 
     &__grid-wrapper{
         width: fit-content;
         @media #{$mq-620-down}{
-            
             justify-self: center;
-            
         }
     }
 
